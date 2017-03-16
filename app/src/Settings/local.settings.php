@@ -9,7 +9,7 @@ return [
 
         // database settings
         'pdo' => [
-            'dsn' => 'mysql:host=localhost;dbname=salesforce;charset=utf8',
+            'dsn' => 'mysql:host=localhost;dbname=minimalslim;charset=utf8',
             'username' => 'root',
             'password' => 'password',
         ],

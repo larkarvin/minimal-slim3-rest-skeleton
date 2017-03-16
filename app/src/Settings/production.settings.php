@@ -5,6 +5,7 @@ return [
         // Slim Settings
         'determineRouteBeforeAppMiddleware' => false,
         'displayErrorDetails' => false,
+        'hapiKey' => 'aaaaaaaaaaaaaa',
 
         // database settings
         'pdo' => [

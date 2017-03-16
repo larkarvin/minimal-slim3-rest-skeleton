@@ -8,7 +8,7 @@ use Slim\Http\Response;
 use App\Models\Deals;
 
 /**
- * Class HomeAction.
+ * Class DealsAction.
  */
 final class Deals
 {
@@ -24,6 +24,13 @@ final class Deals
         $this->httpClient = $httpClient; // example of injecting 
 
     }
+
+    public function __invoke(Request $request, Response $response, $args)
+    {
+        $response->write('Home Page');
+        return $response;
+    }
+
 
     public function getDeals(Request $request, Response $response, $args)
     {

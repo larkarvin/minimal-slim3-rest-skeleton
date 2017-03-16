@@ -1,22 +1,21 @@
-# Slim 3 REST Skeleton
+# Minimal Slim 3 REST Skeleton
 
-This is a simple skeleton project for Slim 3 that implements a simple REST API.
+This is a minimal skeleton project for Slim 3 for REST APIs. Environment based configuration, Multiple Routes file for organization and usage of ControllerAction and Model classes.
 Based on [akrabat's slim3-skeleton](https://github.com/akrabat/slim3-skeleton).
 
-## Create Database
 
-```sql
-CREATE TABLE IF NOT EXISTS `notes` (
-`id` int(11) NOT NULL,
-  `text` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+## Adding routes
 
+create a file `app/src/Routes/*.routes.php`
 
-ALTER TABLE `notes`
- ADD PRIMARY KEY (`id`);
+## Environment Based config
 
+`app/src/Settings/ENVIRONMENTNAME.settings.php` 
 
-ALTER TABLE `notes`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
-```
+Default environment is `local`.
+
+### Adding Environment Variable to your VirtualHost
+
+```SetEnv APPLICATION_ENV "production"```
+
 

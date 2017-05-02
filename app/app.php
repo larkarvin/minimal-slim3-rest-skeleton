@@ -37,5 +37,10 @@ foreach ($routers as $router) {
     require $router;
 }
 
+if(isset($argv)){
+    unset($app->getContainer()['errorHandler']);
+    unset($app->getContainer()['phpErrorHandler']);
+}
+
 // Run!
 $app->run();
